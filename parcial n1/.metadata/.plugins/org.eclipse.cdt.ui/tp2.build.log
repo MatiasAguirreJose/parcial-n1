@@ -1,0 +1,11 @@
+19:50:58 **** Incremental Build of configuration Debug for project tp2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'sortEmployees':
+..\src\ArrayEmployees.c:169:72: error: expected ')' before 'list'
+  169 |        if(strcmp(list[i].lastName, list[j].lastName)<0|| list[i].sector  list[j].sector)
+      |          ~                                                             ^ ~~~~
+      |                                                                        )
+
+19:50:58 Build Failed. 1 errors, 0 warnings. (took 93ms)
+

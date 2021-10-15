@@ -1,0 +1,89 @@
+
+
+
+/*int retorno;
+	retorno = -1;
+	if(){
+		retorno = 0;
+	}
+
+	return retorno;
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+#include "ArrayEmployees.h"
+#define TRUE 0
+#define TAM 2
+
+#define FALSE 1
+
+ //1000
+
+
+
+
+Employee* listaEmpleados[TAM];
+
+
+initEmployees(listaEmpleados[], TAM);
+
+
+int initEmployees(Employee* list[], int len){
+    setbuf(stdout,NULL);
+    int retorno;
+    retorno = -1;
+	int i;
+	if(list != NULL && len >= 0){
+
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = 0;
+		}
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int addEmployee(Employee* list, int len, int id, char name[],char lastName[],float salary,int sector)
+{
+    setbuf(stdout,NULL);
+	int retorno;
+	retorno = -1;
+	int flag;
+	flag = TRUE;
+	id = 0;
+
+	int i;
+	for(i = 0; i < len; i++ ){
+		if(list != NULL && len >= 0 && list[i].isEmpty == TRUE && flag==TRUE)
+		{
+
+			id++;
+			printf("Ingresar nombre del empleado ");
+			gets(name);
+			printf("Ingresar apellido del empleado ");
+		    gets(lastName);
+		    printf("Ingresar el salario del empleado ");
+		    scanf("%f",&salary);
+		    printf("Ingresar el sector del empleado ");
+		    scanf("%d",&sector);
+
+		    list[i].id = id;
+		    strcpy(list[i].name, name);
+		    strcpy(list[i].lastName, lastName);
+		    list[i].salary = salary;
+		    list[i].sector = sector;
+		    list[i].isEmpty= FALSE;
+		    flag = FALSE;
+		    retorno = 0;
+		}
+	}
+	return retorno;
+}
+

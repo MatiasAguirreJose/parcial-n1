@@ -1,0 +1,240 @@
+
+
+/*int retorno;
+	retorno = -1;
+	if(){
+		retorno = 0;
+	}
+
+	return retorno;
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+#include "ArrayEmployees.h"
+#define TRUE 0
+#define FALSE 1
+
+ //1000
+
+
+
+
+int initEmployees(Employee* list, int len){
+    setbuf(stdout,NULL);
+    int retorno;
+    retorno = -1;
+	int i;
+	if(list != NULL && len >= 0){
+
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = TRUE;
+		}
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int addEmployee(Employee* list, int len, int id, char name[],char lastName[],float salary,int sector)
+{
+    setbuf(stdout,NULL);
+	int retorno;
+	retorno = -1;
+	int flag;
+	flag = TRUE;
+
+
+	int i;
+	for(i = 0; i < len; i++ ){
+		if(list != NULL && len >= 0 && list[i].isEmpty == TRUE && flag==TRUE)
+		{
+		    list[i].id = id;
+		    strcpy(list[i].name, name);
+		    strcpy(list[i].lastName, lastName);
+		    list[i].salary = salary;
+		    list[i].sector = sector;
+		    list[i].isEmpty= FALSE;
+		    flag = FALSE;
+		    retorno = 0;
+		}
+	}
+	return retorno;
+}
+
+int findEmployeeById(Employee* list, int len,int id){
+
+	int retorno = -1;
+	for (int i = 0; i < len; ++i) {
+
+		 if(list[i].id == id){
+
+			 retorno = i;
+
+		}
+    }
+
+    return retorno;
+
+}
+
+void modifyEmployee( Employee* list, int len, int id){
+
+	int ModificarMenu;
+
+	int retorno = findEmployeeById(list,len,id);
+
+	if(retorno != -1 ){
+         printf("que quiere modificar \n 1-Nombre \n 2- Apellido \n 3- Salario \n 4- Sector");
+		 scanf ("%d",&ModificarMenu);
+
+		 switch (ModificarMenu) {
+			case 1:
+				printf("ingrese el nombre nuevo");
+				fflush(stdin);
+				gets(list[retorno].name);
+				puts(list[retorno].name);
+
+				break;
+			case 2:
+				printf("ingrese el Apellido nuevo");
+				fflush(stdin);
+				gets(list[retorno].lastName);
+				puts(list[retorno].lastName);
+				break;
+
+			case 3:
+				printf("ingrese el Salario nuevo");
+				scanf("%f",&list[retorno].salary);
+				printf("el nuevo salario es %f",list[retorno].salary);
+				 break;
+			case 4:
+				printf("ingrese el Sector nuevo");
+				scanf("%d",&list[retorno].sector);
+				printf("el nuevo sector es %d",list[retorno].sector);
+				break;
+		 }
+	}
+	else{
+		printf("No existe nadie con ese ID");
+
+	}
+}
+int removeEmployee(Employee* list, int len, int id){
+	int i;
+	int retorno = -1;
+
+	retorno = findEmployeeById(list,len,id);
+	if(retorno != -1 && list != NULL && len >= 0){
+		for(i = 0; i < len; i++)
+		{
+			if(list[i].id == id )
+			{
+                 list[i].isEmpty = TRUE;
+			}
+		}
+	}
+
+	return retorno;
+}
+
+int sortEmployees(Employee* list, int len, int order){
+
+	int retorno = -1;
+
+	if(list != NULL && len >= 0 && (order == 0 || order == 1)){
+		retorno = 0;
+
+
+				Employee auxiliarProducto;
+				for(int i=0; i<len-1; i++)
+				{
+					for(int j=i+1; j<len; j++)
+					{
+						if(order == 1){
+							if(strcmp(list[i].lastName, list[j].lastName)>0)
+							{
+								auxiliarProducto = list[i];
+								list[i] = list[j];
+								list[j] = auxiliarProducto;
+							}
+							else if(list[i].sector > list[j].sector)
+							{
+								auxiliarProducto = list[i];
+								list[i] = list[j];
+								list[j] = auxiliarProducto;
+							}
+						}
+						else{
+							if(strcmp(list[i].lastName, list[j].lastName)<0)
+							{
+								auxiliarProducto = list[i];
+								list[i] = list[j];
+								list[j] = auxiliarProducto;
+						    }
+							else if(list[i].sector < list[j].sector)
+							{
+								auxiliarProducto = list[i];
+								list[i] = list[j];
+								list[j] = auxiliarProducto;
+						    }
+						}
+					}
+				}
+		}
+
+
+
+
+
+	return retorno;
+}
+
+
+float totalSalary(Employee* list, int len){
+	float totalSalary = -1;
+
+	if(list!= NULL && len>=0){
+			totalSalary += 1;
+
+			for (int i = 0; i < len; ++i) {
+				if(list[i].salary){
+
+					totalSalary += list[i].salary;
+
+				}
+
+			}
+
+	}
+
+
+
+	return totalSalary;
+}
+
+float Average(Employee* list, int len){
+
+
+	float Salario=0;
+	float PromedioSalary;
+	if(list!= NULL && len>=0){
+
+	Salario = totalSalary(list, len);
+
+	PromedioSalary = Salario / (float) len ;
+
+	}
+
+
+
+
+	return PromedioSalary;
+}
+
+

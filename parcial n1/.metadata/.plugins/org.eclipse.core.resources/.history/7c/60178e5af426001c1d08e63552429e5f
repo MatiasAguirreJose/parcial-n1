@@ -1,0 +1,47 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int IngreseNumero(int numero);
+void Descuento(int numeros);
+int main(void) {
+
+	setbuf(stdout, NULL);
+	int numero;
+	int final;
+
+	final = IngreseNumero(numero);
+
+	void Descuento(final);
+
+	return EXIT_SUCCESS;
+}
+
+int IngreseNumero(int numero){
+	int descuento;
+	int total;
+
+
+	printf("ingrese el importe");
+	scanf("%d",&numero);
+
+	printf("cuando de descuento desea aplicar");
+	scanf("%d",&descuento);
+
+	total = (numero*descuento)/100;
+
+
+	return total;
+
+}
+
+void Descuento(int numeros){
+
+
+	printf("el numero con descuento es %d",numero);
+
+
+	}
+
+

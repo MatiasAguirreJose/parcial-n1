@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include "funciones.h"
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int opcion;
+
+	SelecionarMenu();
+	scanf("%d",&opcion);
+
+
+	MenuPrincipal(opcion);
+	return EXIT_SUCCESS;
+}

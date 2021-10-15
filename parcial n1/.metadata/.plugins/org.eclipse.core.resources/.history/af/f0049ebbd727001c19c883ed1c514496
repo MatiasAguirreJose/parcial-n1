@@ -1,0 +1,154 @@
+
+
+
+/*int retorno;
+	retorno = -1;
+	if(){
+		retorno = 0;
+	}
+
+	return retorno;
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+#include "ArrayEmployees.h"
+#define TRUE 0
+
+
+#define FALSE 1
+
+ //1000
+
+
+
+
+int initEmployees(Employee* list, int len){
+    setbuf(stdout,NULL);
+    int retorno;
+    retorno = -1;
+	int i;
+	if(list != NULL && len >= 0){
+
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = 0;
+		}
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int addEmployee(Employee* list, int len, int id, char name[],char lastName[],float salary,int sector)
+{
+    setbuf(stdout,NULL);
+	int retorno;
+	retorno = -1;
+	int flag;
+	flag = TRUE;
+	id = 0;
+
+	int i;
+	for(i = 0; i < len; i++ ){
+		if(list != NULL && len >= 0 && list[i].isEmpty == TRUE && flag==TRUE)
+		{
+
+			id++;
+			printf("Ingresar nombre del empleado ");
+			gets(name);
+			printf("Ingresar apellido del empleado ");
+		    gets(lastName);
+		    printf("Ingresar el salario del empleado ");
+		    scanf("%f",&salary);
+		    printf("Ingresar el sector del empleado ");
+		    scanf("%d",&sector);
+
+		    list[i].id = id;
+		    strcpy(list[i].name, name);
+		    strcpy(list[i].lastName, lastName);
+		    list[i].salary = salary;
+		    list[i].sector = sector;
+		    list[i].isEmpty= FALSE;
+		    flag = FALSE;
+		    retorno = 0;
+		}
+	}
+	return retorno;
+}
+
+int findEmployeeById(Employee* list, int len,int id){
+
+	int retorno = -1;
+	for (int i = 0; i < len; ++i) {
+
+	 if(list[i].id == id){
+
+		 retorno = i;
+
+	}
+
+
+
+}
+
+return retorno;
+
+}
+
+void modificar( Employee* list, int len){
+
+	int idModificar;
+	int ModificarMenu;
+
+	printf("ingrese el ID a modificar");
+	scanf("%d",&idModificar);
+
+	int retorno = findEmployeeById(list,len,idModificar);
+
+	if(retorno != -1 ){
+
+
+
+
+	 printf("que quiere modificar \n 1-Nombre \n 2- Apellido \n 3- Salario \n 4- Sector");
+	 scanf ("%d",&ModificarMenu);
+
+	 switch (ModificarMenu) {
+		case 1:
+			printf("ingrese el nombre nuevo");
+			gets(list[retorno].name);
+			puts(list[retorno].name);
+
+		 	break;
+		case 2:
+			printf("ingrese el Apellido nuevo");
+				gets(list[retorno].lastName);
+				puts(list[retorno].lastName);
+			break;
+
+		case 3:
+			printf("ingrese el Salario nuevo");
+			scanf("el nuevo salario es %f",list[retorno].salary);
+			printf("%f",list[retorno].salary);
+			 break;
+		case 4:
+			printf("ingrese el Sector nuevo");
+			scanf("%d",list[retorno].sector);
+			printf("el nuevo sector es %d",list[retorno].sector);
+			break;
+
+
+
+
+
+}
+	}
+
+
+
+}

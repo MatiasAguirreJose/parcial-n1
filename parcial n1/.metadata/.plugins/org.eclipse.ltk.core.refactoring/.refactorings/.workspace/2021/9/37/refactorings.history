@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;vectores 5-2/src/CantidadVectores.c&apos;" deleteContents="false" description="Delete resource &apos;vectores 5-2/src/CantidadVectores.c&apos;" element1="/vectores 5-2/src/CantidadVectores.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1631404479956"/>&#x0A;<refactoring comment="Delete resource &apos;vectores 5-2/src/Cantidad.c&apos;" deleteContents="false" description="Delete resource &apos;vectores 5-2/src/Cantidad.c&apos;" element1="/vectores 5-2/src/Cantidad.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1631406701248"/>
+</session>

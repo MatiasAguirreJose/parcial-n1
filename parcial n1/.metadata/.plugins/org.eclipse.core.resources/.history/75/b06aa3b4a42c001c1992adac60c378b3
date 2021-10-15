@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include "Funciones.h"
+#define TRUE 0
+#define FALSE 1
+#define TAM 10
+int main(void) {
+	setbuf(stdout,NULL);
+
+	Clientes muestra[TAM];
+	InicializarClientes( muestra,  TAM);
+	int opcion;
+
+	SelecionarMenu();
+	do{
+	scanf("%d",&opcion);
+	MenuPrincipal(opcion);
+
+	}while(opcion != 11);
+
+	return EXIT_SUCCESS;
+}

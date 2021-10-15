@@ -1,0 +1,7 @@
+00:00:06 **** Incremental Build of configuration Debug for project Vectores ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vectores.o" "..\\src\\Vectores.c" 
+gcc -o Vectores.exe "src\\Vectores.o" "src\\suma.o" 
+
+00:00:06 Build Finished. 0 errors, 0 warnings. (took 281ms)
+

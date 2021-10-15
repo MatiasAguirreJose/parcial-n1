@@ -1,0 +1,164 @@
+Info: Nothing to build for parcial 1
+Info: Nothing to build for parcial 1
+20:09:37 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+..\src\FuncionesCodigo.c: In function 'AniadirCliente':
+..\src\FuncionesCodigo.c:66:11: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   66 |    strcpy(*Localidad[i],localidadinicial);
+      |           ^~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ..\src\FuncionesCodigo.c:3:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:09:51 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+In file included from ..\src\FuncionesCodigo.c:5:
+..\src\Funciones.h:31:80: error: expected ';', ',' or ')' before '&' token
+   31 | int AniadirCliente(Clientes* muestra, int tamanio, int id, char empresa[],char &Localidad[],char localidadinicial[], int cuit, char direccion[]);
+      |                                                                                ^
+20:09:57 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:10:04 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+..\src\FuncionesCodigo.c: In function 'AniadirCliente':
+..\src\FuncionesCodigo.c:66:11: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   66 |    strcpy(*Localidad[i],localidadinicial);
+      |           ^~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ..\src\FuncionesCodigo.c:3:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:10:09 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:10:38 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+..\src\parcial 1.c: In function 'main':
+..\src\parcial 1.c:54:50: warning: passing argument 5 of 'AniadirCliente' from incompatible pointer type [-Wincompatible-pointer-types]
+   54 |     if(AniadirCliente(muestra, TAM, id, Empresa, &Localidad,LocalidadInicial,Cuit,Direccion) == 0){
+      |                                                  ^~~~~~~~~~
+      |                                                  |
+      |                                                  char * (*)[10][20]
+In file included from ..\src\parcial 1.c:5:
+..\src\Funciones.h:31:81: note: expected 'char **' but argument is of type 'char * (*)[10][20]'
+   31 | int AniadirCliente(Clientes* muestra, int tamanio, int id, char empresa[],char *Localidad[],char localidadinicial[], int cuit, char direccion[]);
+      |                                                                           ~~~~~~^~~~~~~~~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:10:43 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+..\src\parcial 1.c: In function 'main':
+..\src\parcial 1.c:54:50: warning: passing argument 5 of 'AniadirCliente' from incompatible pointer type [-Wincompatible-pointer-types]
+   54 |     if(AniadirCliente(muestra, TAM, id, Empresa, Localidad,LocalidadInicial,Cuit,Direccion) == 0){
+      |                                                  ^~~~~~~~~
+      |                                                  |
+      |                                                  char * (*)[20]
+In file included from ..\src\parcial 1.c:5:
+..\src\Funciones.h:31:81: note: expected 'char **' but argument is of type 'char * (*)[20]'
+   31 | int AniadirCliente(Clientes* muestra, int tamanio, int id, char empresa[],char *Localidad[],char localidadinicial[], int cuit, char direccion[]);
+      |                                                                           ~~~~~~^~~~~~~~~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+Info: Nothing to build for parcial 1
+Info: Nothing to build for parcial 1
+Info: Nothing to build for parcial 1
+20:11:29 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+c:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file parcial 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:11:33 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:11:49 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+..\src\parcial 1.c: In function 'main':
+..\src\parcial 1.c:44:10: warning: passing argument 1 of 'gets' from incompatible pointer type [-Wincompatible-pointer-types]
+   44 |     gets(&LocalidadInicial);
+      |          ^~~~~~~~~~~~~~~~~
+      |          |
+      |          char (*)[20]
+In file included from ..\src\parcial 1.c:1:
+c:\mingw\x86_64-w64-mingw32\include\stdio.h:502:17: note: expected 'char *' but argument is of type 'char (*)[20]'
+  502 |   char *__cdecl gets(char *_Buffer) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+      |                 ^~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:11:54 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+..\src\parcial 1.c: In function 'main':
+..\src\parcial 1.c:44:10: warning: passing argument 1 of 'gets' makes pointer from integer without a cast [-Wint-conversion]
+   44 |     gets(*LocalidadInicial);
+      |          ^~~~~~~~~~~~~~~~~
+      |          |
+      |          char
+In file included from ..\src\parcial 1.c:1:
+c:\mingw\x86_64-w64-mingw32\include\stdio.h:502:17: note: expected 'char *' but argument is of type 'char'
+  502 |   char *__cdecl gets(char *_Buffer) __MINGW_ATTRIB_DEPRECATED_SEC_WARN;
+      |                 ^~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:12:02 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parcial 1.o" "..\\src\\parcial 1.c" 
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:13:38 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+..\src\FuncionesCodigo.c: In function 'AniadirCliente':
+..\src\FuncionesCodigo.c:66:11: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   66 |    strcpy(*Localidad[i],localidadinicial);
+      |           ^~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ..\src\FuncionesCodigo.c:3:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+20:14:25 **** Incremental Build of configuration Debug for project parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+gcc -o "parcial 1.exe" "src\\FuncionesCodigo.o" "src\\parcial 1.o" 
+Info: Nothing to build for parcial n1
+20:21:41 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 
+c:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file parcial n1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:21:43 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 
+20:21:49 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 
+c:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file parcial n1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:21:51 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 
+20:21:59 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\FuncionesCodigo.o" "..\\src\\FuncionesCodigo.c" 
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 
+c:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file parcial n1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:22:01 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 

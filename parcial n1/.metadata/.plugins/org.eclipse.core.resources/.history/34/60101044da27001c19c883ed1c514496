@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "ArrayEmployees.h"
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int TAM = 2;
+	int idInicial = 0;
+	char nombre[51];
+	char apellido[51];
+	float salario ;
+	int sector;
+	Employee listaEmpleados[TAM];
+
+	initEmployees(listaEmpleados,TAM);
+
+	for(int i = 0; i < TAM; i++){
+	printf("Ingresar nombre del empleado ");
+	fflush(stdin);
+	fgets(nombre,sizeof(nombre),stdin);
+
+	printf("Ingresar apellido del empleado ");
+	fflush(stdin);
+	fgets(apellido,sizeof(apellido),stdin);
+
+	printf("Ingresar el salario del empleado ");
+	fflush(stdin);
+	scanf("%f",&salario);
+
+	printf("Ingresar el sector del empleado ");
+	fflush(stdin);
+	scanf("%d",&sector);
+	}
+
+
+
+
+	/*for(int i = 0; i < TAM; i++){
+		printf("%d",listaEmpleados[i].isEmpty);
+		}
+*/
+	addEmployee(listaEmpleados,TAM,idInicial,nombre,apellido,salario,sector);
+
+	for(int i = 0; i < TAM; i++)
+	{
+		printf("ID: %d\n",listaEmpleados[i].id);
+		printf("Nombre: %s",listaEmpleados[i].name);
+		printf("Apellido: %s",listaEmpleados[i].lastName);
+		printf("Salario: %.2f \n",listaEmpleados[i].salary);
+		printf("Sector: %d\n",listaEmpleados[i].sector);
+
+	}
+
+	modificar(listaEmpleados,TAM);
+	return EXIT_SUCCESS;
+}

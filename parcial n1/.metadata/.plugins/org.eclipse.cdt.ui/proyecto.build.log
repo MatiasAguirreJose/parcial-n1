@@ -1,0 +1,27 @@
+00:54:05 **** Rebuild of configuration Debug for project proyecto ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+..\src\Cliente.c:2:2: error: expected identifier or '(' before 'return'
+    2 |  return retorno;
+      |  ^~~~~~
+..\src\Cliente.c:4:1: error: expected identifier or '(' before '}' token
+    4 | }
+      | ^
+..\src\Cliente.c:5:24: error: unknown type name 'Recoleccion'
+    5 | int InicializarPedidos(Recoleccion* cliente, int len){
+      |                        ^~~~~~~~~~~
+..\src\Cliente.c:29:20: error: unknown type name 'Clientes'
+   29 | int AniadirCliente(Clientes* listado, int len, int id, char nombreEmpresa[],char cuit[],char direccion[], char localidad[]){
+      |                    ^~~~~~~~
+..\src\Cliente.c:51:27: error: unknown type name 'Clientes'
+   51 | int EncontrarClientePorId(Clientes* listado, int len,int id){
+      |                           ^~~~~~~~
+..\src\Cliente.c:66:24: error: unknown type name 'Clientes'
+   66 | void ModificarCliente( Clientes* listado, int len, int id){
+      |                        ^~~~~~~~
+..\src\Cliente.c:99:21: error: unknown type name 'Clientes'
+   99 | int EliminarCliente(Clientes* listado, int len, int id){
+      |                     ^~~~~~~~
+
+00:54:05 Build Failed. 7 errors, 0 warnings. (took 100ms)
+

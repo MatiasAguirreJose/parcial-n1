@@ -1,0 +1,12 @@
+22:38:13 **** Rebuild of configuration Debug for project tapa1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\tp1.o" "..\\src\\tp1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CalculoDeseado.o" "..\\src\\CalculoDeseado.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenuOpciones.o" "..\\src\\MenuOpciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenuCalculadora.o" "..\\src\\MenuCalculadora.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\IngresarFlotante.o" "..\\src\\IngresarFlotante.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Calculos.o" "..\\src\\Calculos.c" 
+gcc -o tapa1.exe "src\\CalculoDeseado.o" "src\\Calculos.o" "src\\IngresarFlotante.o" "src\\MenuCalculadora.o" "src\\MenuOpciones.o" "src\\tp1.o" 
+
+22:38:14 Build Finished. 0 errors, 0 warnings. (took 946ms)
+

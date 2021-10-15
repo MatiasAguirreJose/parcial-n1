@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include "FuncionesCodigo.c"
+#define TRUE 0
+#define FALSE 1
+struct{
+	 int idCliente;
+	 char Empresa[10];
+	 char localidad[25];
+	 int cuit;
+	 int direccion;
+	 int isEmpty;
+}typedef Clientes;
+
+struct{
+	int idRecoleccion;
+	int idCliente;
+	int cantidadPedidosPendientes;
+	int cantidadPedidosCompletados;
+	int estado;
+	float kilos;
+	int isEmpty;
+}typedef Recoleccion;
+
+void SelecionarMenu(void);
+void MenuPrincipal(int opcion);
+
+int AniadirCliente(Clientes* muestra, int tamanio, int id, char empresa[10],char localidad[10], int cuit);
+

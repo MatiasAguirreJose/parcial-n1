@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+#define TRUE 0
+#define FALSE 1
+struct{
+	 int idCliente ;
+	 char Empresa[21];
+	 char localidad[21];
+	 int cuit;
+	 char direccion[21];;
+	 int isEmpty;
+}typedef Clientes;
+
+struct{
+	int idRecoleccion;
+	int idCliente;
+	int cantidadPedidosPendientes;
+	int cantidadPedidosCompletados;
+	int estado;
+	float kilos;
+	int isEmpty;
+}typedef Recoleccion;
+
+void SelecionarMenu(void);
+
+int AniadirCliente(Clientes* muestra, int tamanio, int id, char empresa[],char localidad[], int cuit, char direccion[]);
+void MostrarDatos(Clientes* muestra, int tamanio);
+int InicializarClientes(Clientes* muestra, int tam);
+

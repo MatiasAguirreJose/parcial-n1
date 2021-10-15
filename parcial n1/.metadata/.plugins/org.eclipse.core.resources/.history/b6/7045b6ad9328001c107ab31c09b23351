@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "ArrayEmployees.h"
+
+
+#define TRUE 0
+#define FALSE 1
+int main(void) {
+	setbuf(stdout,NULL);
+	int TAM = 3;
+	int idInicial = 0;
+	//int idModificar;
+	//int idEliminar;
+	char nombre[51];
+	char apellido[51];
+	float salario ;
+	int sector;
+	float promedio ;
+	float salarioTotal ;
+	int ContadorMayorSalario;
+	Employee listaEmpleados[TAM];
+
+	initEmployees(listaEmpleados,TAM);
+
+	for(int i = 0; i < TAM; i++){
+		idInicial++;
+	printf("Ingresar nombre del empleado ");
+	fflush(stdin);
+	fgets(nombre,sizeof(nombre),stdin);
+
+	printf("Ingresar apellido del empleado ");
+	fflush(stdin);
+	fgets(apellido,sizeof(apellido),stdin);
+
+	printf("Ingresar el salario del empleado ");
+	fflush(stdin);
+	scanf("%f",&salario);
+
+	printf("Ingresar el sector del empleado ");
+	fflush(stdin);
+	scanf("%d",&sector);
+
+	addEmployee(listaEmpleados,TAM,idInicial,nombre,apellido,salario,sector);
+	}
+
+	//printf("Ingrese el ID a modificar");
+	//scanf("%d",&idModificar);
+	//modifyEmployee(listaEmpleados,TAM,idModificar);
+	/*printf("Ingrese el ID a eliminar");
+	//scanf("%d",&idEliminar);
+	//modifyEmployee(listaEmpleados,TAM,idEliminar);
+
+*/
+	sortEmployees(listaEmpleados,TAM,TRUE);
+	for(int i = 0; i < TAM; i++){
+		if(listaEmpleados[i].isEmpty == FALSE){
+
+			printf("ID ASDASDAS: %d\n",listaEmpleados[i].id);
+			printf("Nombre ASDASD: %s",listaEmpleados[i].name);
+			printf("Apellido ASDASD: %s",listaEmpleados[i].lastName);
+			printf("Salario ASDASD: %.2f \n",listaEmpleados[i].salary);
+			printf("Sector ASDASD: %d\n",listaEmpleados[i].sector);
+		}
+
+	}
+
+
+	/*for(int i = 0; i < TAM; i++)
+	{
+		printf("ID: %d\n",listaEmpleados[i].id);
+		printf("Nombre: %s",listaEmpleados[i].name);
+		printf("Apellido: %s",listaEmpleados[i].lastName);
+		printf("Salario: %.2f \n",listaEmpleados[i].salary);
+		printf("Sector: %d\n",listaEmpleados[i].sector);
+
+	}*/
+
+	promedio  = Average( listaEmpleados, TAM);
+	salarioTotal =  totalSalary(listaEmpleados, TAM);
+	ContadorMayorSalario = ContadorPromedio(listaEmpleados, TAM);
+
+ printf("el Promedio de los Salarios es %.2f \n  La suma de los salarios es %.2f \n",promedio, salarioTotal);
+ printf("empleados que superan el salario promedio es  %d \n ",ContadorMayorSalario);
+
+
+
+	return EXIT_SUCCESS;
+}
+

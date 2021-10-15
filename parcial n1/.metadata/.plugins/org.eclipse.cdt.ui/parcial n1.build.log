@@ -1,0 +1,6 @@
+20:22:01 **** Incremental Build of configuration Debug for project parcial n1 ****
+Info: Internal Builder is used for build
+gcc -o "parcial n1.exe" "src\\FuncionesCodigo.o" "src\\parcial n1.o" 
+
+20:22:01 Build Finished. 0 errors, 0 warnings. (took 202ms)
+

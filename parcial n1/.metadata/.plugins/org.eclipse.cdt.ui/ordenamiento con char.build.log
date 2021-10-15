@@ -1,0 +1,71 @@
+20:09:35 **** Incremental Build of configuration Debug for project ordenamiento con char ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ordenamiento.o" "..\\src\\ordenamiento.c" 
+..\src\ordenamiento.c: In function 'main':
+..\src\ordenamiento.c:27:36: warning: passing argument 4 of 'calcularMayor' from incompatible pointer type [-Wincompatible-pointer-types]
+   27 |  calcularMayor(nota, edad, legajo, nombre, T);
+      |                                    ^~~~~~
+      |                                    |
+      |                                    char (*)[50]
+..\src\ordenamiento.c:17:63: note: expected 'char *' but argument is of type 'char (*)[50]'
+   17 | void calcularMayor(int nota[], int edad[], int legajo[], char nombre[], int tam);
+      |                                                          ~~~~~^~~~~~~~
+..\src\ordenamiento.c: In function 'calcularMayor':
+..\src\ordenamiento.c:44:20: warning: passing argument 1 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+   44 |    if(strcmp(nombre[i],nombre[j]) > 0 ){
+      |              ~~~~~~^~~
+      |                    |
+      |                    char
+In file included from ..\src\ordenamiento.c:12:
+c:\mingw\x86_64-w64-mingw32\include\string.h:63:34: note: expected 'const char *' but argument is of type 'char'
+   63 |   int __cdecl strcmp(const char *_Str1,const char *_Str2);
+      |                      ~~~~~~~~~~~~^~~~~
+..\src\ordenamiento.c:44:30: warning: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+   44 |    if(strcmp(nombre[i],nombre[j]) > 0 ){
+      |                        ~~~~~~^~~
+      |                              |
+      |                              char
+In file included from ..\src\ordenamiento.c:12:
+c:\mingw\x86_64-w64-mingw32\include\string.h:63:52: note: expected 'const char *' but argument is of type 'char'
+   63 |   int __cdecl strcmp(const char *_Str1,const char *_Str2);
+      |                                        ~~~~~~~~~~~~^~~~~
+..\src\ordenamiento.c:58:32: warning: passing argument 2 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   58 |     strcpy(auxiliarchar, nombre[i]);
+      |                          ~~~~~~^~~
+      |                                |
+      |                                char
+In file included from ..\src\ordenamiento.c:12:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'const char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+..\src\ordenamiento.c:59:18: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   59 |     strcpy(nombre[i], nombre[j]);
+      |            ~~~~~~^~~
+      |                  |
+      |                  char
+In file included from ..\src\ordenamiento.c:12:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+..\src\ordenamiento.c:59:29: warning: passing argument 2 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   59 |     strcpy(nombre[i], nombre[j]);
+      |                       ~~~~~~^~~
+      |                             |
+      |                             char
+In file included from ..\src\ordenamiento.c:12:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'const char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+..\src\ordenamiento.c:60:18: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   60 |     strcpy(nombre[j], auxiliarchar);
+      |            ~~~~~~^~~
+      |                  |
+      |                  char
+In file included from ..\src\ordenamiento.c:12:
+c:\mingw\x86_64-w64-mingw32\include\string.h:61:18: note: expected 'char * restrict' but argument is of type 'char'
+   61 |   char * __cdecl strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+      |                  ^~~~~~
+gcc -o "ordenamiento con char.exe" "src\\ordenamiento.o" 
+
+20:09:35 Build Finished. 0 errors, 7 warnings. (took 285ms)
+
